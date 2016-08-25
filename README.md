@@ -4,7 +4,15 @@
 
 现在焦点轮播是每款App必备的功能，各种效果的都有，鉴于ViewPager不能循环，也不支持自动轮播，因此，我在JeasonWong/QingtingBannerView 的（仿蜻蜓FM轮播banner，他的github地址：https://github.com/JeasonWong/QingtingBannerView） 的基础上，结合我之前工作中的一些经验，写了这个小demo，可以让初学者很快的实现自己需要的循环轮播。
 
-通过泛型、抽象等方式，如果新增一种轮播显示样式，只需要简单的实现2个View即可
+通过泛型、抽象等方式，如果新增一种轮播显示样式，只需要简单的实现2个View即可。
+public class BannerView<T, V> extends FrameLayout {
+}
+
+public abstract class BaseBannerView<T, V> extends RelativeLayout {
+}
+
+public class HomeBannerView extends BaseBannerView<HomeBanner, HomeBannerItemView> {
+}
 
 
 BannerView.java           -- ViewPager及当前焦点显示
