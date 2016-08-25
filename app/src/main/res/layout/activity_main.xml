@@ -1,0 +1,13 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <me.rain.android.bannerview.view.HomeBannerView
+            android:id="@+id/home_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </FrameLayout>
+</layout>
