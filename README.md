@@ -15,3 +15,18 @@ BannerIdentifyBar         -- 焦点位置显示
 显示Demo（如果显示效果不同，只需自定义实现下面2个类即可）：
 HomeBannerView.java       -- 主界面的广告轮播
 HomeBannerItemView.java   -- 主界面的广告Item View
+
+
+使用时只需要在layout中加入以下代码：
+<me.rain.android.bannerview.view.HomeBannerView
+            android:id="@+id/home_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+            
+同理，如果是用户自定义的View：
+<me.rain.android.bannerview.view.XXXXBannerView
+            android:id="@+id/home_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+![](https://github.com/sereinli/BannerView/blob/master/demo.mp4)
