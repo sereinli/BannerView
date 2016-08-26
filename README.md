@@ -2,9 +2,17 @@
 可循环自动轮播焦点位实现相关代码。通过抽象父类的方式，可以轻松的复用在不同的UI需求上，只需要新增少量代码即可
 
 
-现在焦点轮播是每款App必备的功能，各种效果的都有，鉴于ViewPager不能循环，也不支持自动轮播，因此，我在JeasonWong/QingtingBannerView 的基础上，结合我之前工作中的一些经验，写了这个小demo，可以让初学者很快的实现自己需要的循环轮播。
+现在焦点轮播是每款App必备的功能，各种效果的都有，鉴于ViewPager不能循环，也不支持自动轮播，因此，我在JeasonWong/QingtingBannerView 的（仿蜻蜓FM轮播banner，他的github地址：https://github.com/JeasonWong/QingtingBannerView） 的基础上，结合我之前工作中的一些经验，写了这个小demo，可以让初学者很快的实现自己需要的循环轮播。
 
-通过泛型、抽象等方式，如果新增一种轮播显示样式，只需要简单的实现2个View即可
+通过泛型、抽象等方式，如果新增一种轮播显示样式，只需要简单的实现2个View即可。
+public class BannerView<T, V> extends FrameLayout {
+}
+
+public abstract class BaseBannerView<T, V> extends RelativeLayout {
+}
+
+public class HomeBannerView extends BaseBannerView<HomeBanner, HomeBannerItemView> {
+}
 
 
 BannerView.java           -- ViewPager及当前焦点显示
@@ -15,3 +23,18 @@ BannerIdentifyBar         -- 焦点位置显示
 显示Demo（如果显示效果不同，只需自定义实现下面2个类即可）：
 HomeBannerView.java       -- 主界面的广告轮播
 HomeBannerItemView.java   -- 主界面的广告Item View
+
+
+使用时只需要在layout中加入以下代码：
+<me.rain.android.bannerview.view.HomeBannerView
+            android:id="@+id/home_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+            
+同理，如果是用户自定义的View：
+<me.rain.android.bannerview.view.XXXXBannerView
+            android:id="@+id/home_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+![](https://camo.githubusercontent.com/4f8407f247989bf6d4a5f13d02f6e94f97bd23ba/687474703a2f2f69312e6275696d672e636f6d2f343963626264646632396364343838322e676966)
