@@ -1,5 +1,5 @@
 # BannerView
-`无限循环自动轮播焦点位`实现相关代码。通过`抽象父类`的方式，可以轻松的复用在不同的UI需求上，只需要新增少量代码即可。
+`无限循环自动轮播焦点位`AutoCircleViewPager实现相关代码。通过`抽象父类`的方式，可以轻松的复用在不同的UI需求上，只需要新增少量代码即可。
 
 先上效果，gif压缩比较厉害，有点花，凑合看看吧
 ![](https://github.com/sereinli/BannerView/blob/master/demo.gif)
